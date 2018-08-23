@@ -22,9 +22,9 @@ and notifications:
 
 ### My TODO list: 
 - [ ] ReadMe 
-- [ ] Create config file with server parameters checks list, emails 
+- [x] Create config file with server parameters checks list, emails 
 list, slack room name
-- [ ] Create workers which parse server's logs 
+- [x] Create workers which parse server's logs 
 - [ ] Create notifiers which sends notifications (MVP - email and slack msg sender) 
 - [ ] Get all together in main script 
 
