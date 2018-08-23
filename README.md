@@ -25,7 +25,7 @@ and notifications:
 - [x] Create config file with server parameters checks list, emails 
 list, slack room name
 - [x] Create workers which parse server's logs 
-- [ ] Create notifiers which sends notifications (MVP - email and slack msg sender) 
+- [x] Create notifiers which sends notifications (MVP - email and slack msg sender) 
 - [ ] Get all together in main script 
 
 ### Requirements (for Linux Ubuntu 16.04LTS with Python3.5.2)
