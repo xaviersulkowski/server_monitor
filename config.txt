@@ -1,0 +1,7 @@
+ping 8.8.8.8
+free_mem 10000
+free_space /var 9000
+free_space /tmp 64
+free_space /var/mysql 1024
+emails: admin@admin.com
+slack key_here #room_name
