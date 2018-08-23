@@ -1,6 +1,6 @@
 import subprocess
 
-from .worker_facory import Worker
+from .abstract_worker import Worker
 
 
 class Ping(Worker):
@@ -24,10 +24,8 @@ class Ping(Worker):
         network_error_status = False
         msg = ''
 
-        if package_received is True:
+        if package_received is False:
             network_error_status = True
             msg += 'Network problems'
-        else:
-            pass
 
         return [network_error_status, msg]

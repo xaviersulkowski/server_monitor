@@ -1,6 +1,6 @@
 import subprocess
 
-from .worker_facory import Worker
+from .abstract_worker import Worker
 
 
 class FreeSpace(Worker):
