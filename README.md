@@ -10,11 +10,11 @@ slack etc.
 Your task is to create a program, which can be executed on a server and 
 which performs list of checks. If any of the check fails we want it to send 
 notification. List of checks and notification data should be read from a config 
-file. For example, in the config file you should be able to specify checks like: 
-“ping 8.8.8.8” 
-“free_mem 256” 
-“free_space /tmp 64” 
-“free_space /var/mysql 1024”
+file. For example, in the config file you should be able to specify checks like:
+- “ping 8.8.8.8” 
+- “free_mem 256” 
+- “free_space /tmp 64” 
+- “free_space /var/mysql 1024”
 
 and notifications: 
 “emails: email@email@com”
@@ -22,9 +22,9 @@ and notifications:
 
 ### My TODO list: 
 - [ ] ReadMe 
-- [ ] Create config file with server parameters checks list, emails 
+- [x] Create config file with server parameters checks list, emails 
 list, slack room name
-- [ ] Create workers which parse server's logs 
+- [x] Create workers which parse server's logs 
 - [ ] Create notifiers which sends notifications (MVP - email and slack msg sender) 
 - [ ] Get all together in main script 
 
