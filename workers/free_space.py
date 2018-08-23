@@ -29,16 +29,18 @@ class FreeSpace(Worker):
 
         if threshold >= space['total']:
             threshold = int(0.8 * space['total'])
-            UserWarning('Threshold is bigger than total memory. Threshold is set to 80% of total memory')
+            UserWarning('Threshold is bigger than total space. Threshold is set to 80% of total space')
 
         overload_status = False
         msg = ''
 
         if space['free'] >= threshold:
             overload_status = True
-            msg += 'Memory is dangerously close to limit: server uses {}B of {}B that\'s {}%'.format(space['used'],
-                                                                                                     space['total'],
-                                                                                                     (space['used']/space['total'])*100)
+            msg += 'Space in directory {} is dangerously close to limit: ' \
+                   'server uses {}B of {}B that\'s {}%'.format(self.directory,
+                                                               space['used'],
+                                                               space['total'],
+                                                               (space['used']/space['total'])*100)
         else:
             pass
 
