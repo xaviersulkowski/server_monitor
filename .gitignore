@@ -23,6 +23,7 @@ var/
 *.sqlite
 *.sqlite3
 db.*
+*.out
 
 # Sphinx documentation
 docs/_build/
