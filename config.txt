@@ -1,4 +1,5 @@
 ping 8.8.8.8
+ping 8.8.8.8888
 free_mem 10000
 free_space /var 9000
 free_space /tmp 64

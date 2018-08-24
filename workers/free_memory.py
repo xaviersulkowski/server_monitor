@@ -34,9 +34,9 @@ class FreeMemory(Worker):
 
         if memory['free'] >= threshold:
             overload_status = True
-            msg += 'Memory is dangerously close to limit: server uses {}B of {}B that\'s {}%'.format(memory['used'],
+            msg += 'Memory is dangerously close to limit: server uses {} B of {} B that\'s {}%. '.format(memory['used'],
                                                                                                      memory['total'],
-                                                                                                     (memory['used']/memory['total'])*100)
+                                                                                                     int((memory['used']/memory['total'])*100))
         else:
             pass
 
