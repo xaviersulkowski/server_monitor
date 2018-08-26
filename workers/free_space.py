@@ -31,7 +31,7 @@ class FreeSpace(Worker):
             return space
 
         elif err != b'':
-            msg = 'No such a directory {}. '.format(self.directory)
+            msg = err.decode()
             return msg
         else:
             pass

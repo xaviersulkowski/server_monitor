@@ -12,15 +12,12 @@ class Ping(Worker):
                                     stdout=subprocess.PIPE,
                                     stderr=subprocess.PIPE).communicate()
         received = False
-        if 'unknown' in str(err):
-            msg = '{} host unknown. '.format(self.directory)
+        if err != b'':
+            msg = err.decode()
             return msg
-        elif 'unreachable' in str(err):
-            msg = 'Network unreachable. '
-            return msg
-        else:
-            if ' 1 received' in out.decode():
-                received = True
+
+        if out != b'':
+            received = True if ' 1 received' in out.decode() else False
             return received
 
     def check(self):
@@ -29,12 +26,12 @@ class Ping(Worker):
         network_error_status = False
         msg = ''
 
-        if package_received is False:
+        if package_received is True:
+            pass
+        elif package_received is False:
             network_error_status = True
             msg += 'Ups! Network problem: 1 packet transmitted, 0 received. '
-        elif package_received is True:
-            pass
-        elif 'unknown' in package_received or 'unreachable' in package_received:
+        elif type(package_received) != bool:
             network_error_status = True
             msg += package_received
 
